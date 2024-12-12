@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>ABC Company Wiki</h1>
+    <p class="lead">Bem-vindo (a) ao Wiki da empresa ABC Company. Acesse aos artigos no Menu "Artigos".</p>
+    {% if session.logged_in == NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">Cadastrar</a>
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+{% endblock %}
